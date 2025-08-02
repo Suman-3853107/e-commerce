@@ -1,0 +1,927 @@
+[
+  {
+    "id": 1,
+    "title": "iPhone 16 Pro Max",
+    "category": "mobiles",
+    "price": 1199.99,
+    "description": "Latest iPhone with A18 Pro chip, titanium design, and advanced camera system with 5x telephoto zoom.",
+    "images": [
+      "/images/mobile/1-1.jpeg",
+       "/images/mobile/1-2.jpeg",
+        "/images/mobile/1-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.8,
+      "count": 245
+    },
+    "thumbnail":  "/images/mobile/1-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 2,
+    "title": "Moto Edge 50 Pro",
+    "category": "mobiles",
+    "price": 699.99,
+    "description": "Snapdragon 7 Gen 3 processor, 50MP triple camera system, 125W fast charging, and premium curved display.",
+    "images": [
+       "/images/mobile/2-1.jpeg",
+       "/images/mobile/2-2.jpeg",
+        "/images/mobile/2-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 128
+    },
+    "thumbnail":  "/images/mobile/2-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 3,
+    "title": "Samsung Galaxy S24 Ultra",
+    "category": "mobiles",
+    "price": 1299.99,
+    "description": "200MP camera, S Pen built-in, Snapdragon 8 Gen 3, AI-powered photography, and titanium frame.",
+    "images": [
+       "/images/mobile/3-1.jpeg",
+       "/images/mobile/3-2.jpeg",
+        "/images/mobile/3-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.7,
+      "count": 312
+    },
+    "thumbnail":  "/images/mobile/3-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 4,
+    "title": "OnePlus 12R",
+    "category": "mobiles",
+    "price": 499.99,
+    "description": "Snapdragon 8s Gen 3, 100W SUPERVOOC charging, 50MP Sony IMX890 main camera, and 120Hz LTPO display.",
+    "images": [
+       "/images/mobile/4-1.jpeg",
+       "/images/mobile/4-2.jpeg",
+        "/images/mobile/4-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 156
+    },
+    "thumbnail": "/images/mobile/4-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 5,
+    "title": "Google Pixel 8 Pro",
+    "category": "mobiles",
+    "price": 999.99,
+    "description": "Google Tensor G3 chip, advanced AI photography features, 50MP triple camera, and 7 years of updates.",
+    "images": [
+  "/images/mobile/5-1.jpeg",
+       "/images/mobile/5-2.jpeg",
+        "/images/mobile/5-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 189
+    },
+    "thumbnail":  "/images/mobile/5-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 6,
+    "title": "Rolex Submariner",
+    "category": "watches",
+    "price": 8950.00,
+    "description": "Iconic luxury diving watch with Oystersteel case, unidirectional bezel, and automatic movement.",
+    "images": [
+      "/images/watch/1-1.jpeg",
+      "/images/watch/1-2.jpeg",
+      "/images/watch/1-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.9,
+      "count": 67
+    },
+    "thumbnail":  "/images/watch/1-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 7,
+    "title": "Apple Watch Series 10",
+    "category": "watches",
+    "price": 399.99,
+    "description": "Latest Apple Watch with larger display, S10 chip, advanced health sensors, and all-day battery life.",
+    "images": [
+     "/images/watch/2-1.jpeg",
+      "/images/watch/2-2.jpeg",
+      "/images/watch/2-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.7,
+      "count": 234
+    },
+    "thumbnail": "/images/watch/2-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 8,
+    "title": "Omega Speedmaster Professional",
+    "category": "watches",
+    "price": 5350.00,
+    "description": "The legendary Moonwatch with manual-winding chronograph movement and hesalite crystal.",
+    "images": [
+     "/images/watch/3-1.jpeg",
+      "/images/watch/3-2.jpeg",
+      "/images/watch/3-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.8,
+      "count": 89
+    },
+    "thumbnail": "/images/watch/3-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 9,
+    "title": "Garmin Forerunner 965",
+    "category": "watches",
+    "price": 599.99,
+    "description": "Premium GPS running smartwatch with AMOLED display, multi-band GPS, and advanced training metrics.",
+    "images": [
+     "/images/watch/4-1.jpeg",
+      "/images/watch/4-2.jpeg",
+      "/images/watch/4-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 143
+    },
+    "thumbnail": "/images/watch/4-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 10,
+    "title": "Samsung Galaxy Watch 7",
+    "category": "watches",
+    "price": 329.99,
+    "description": "Advanced health monitoring, Wear OS powered by Samsung, 40mm Super AMOLED display, and 40-hour battery.",
+    "images": [
+      "/images/watch/5-1.jpeg",
+      "/images/watch/5-2.jpeg",
+      "/images/watch/5-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 178
+    },
+    "thumbnail": "/images/watch/5-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 11,
+    "title": "MacBook Pro 16-inch M4 Pro",
+    "category": "laptops",
+    "price": 2499.99,
+    "description": "Powerful laptop with M4 Pro chip, 16-inch Liquid Retina XDR display, up to 22-hour battery life.",
+    "images": [
+     "/images/laptop/1-1.jpeg",
+     "/images/laptop/1-2.jpeg",
+     "/images/laptop/1-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.8,
+      "count": 167
+    },
+    "thumbnail": "/images/laptop/1-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 12,
+    "title": "ASUS ROG Strix G18",
+    "category": "laptops",
+    "price": 2299.99,
+    "description": "Gaming powerhouse with Intel Core i9-14900HX, NVIDIA RTX 4080, 32GB RAM, and 18-inch QHD+ display.",
+    "images": [
+      "/images/laptop/2-1.jpeg",
+     "/images/laptop/2-2.jpeg",
+     "/images/laptop/2-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.7,
+      "count": 112
+    },
+    "thumbnail": "/images/laptop/2-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 13,
+    "title": "Dell XPS 13 Plus",
+    "category": "laptops",
+    "price": 1399.99,
+    "description": "Premium ultrabook with 13.4-inch OLED display, Intel Core i7-1360P, 16GB RAM, and sleek carbon fiber design.",
+    "images": [
+      "/images/laptop/3-1.jpeg",
+     "/images/laptop/3-2.jpeg",
+     "/images/laptop/3-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 134
+    },
+    "thumbnail": "/images/laptop/3-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 14,
+    "title": "Lenovo ThinkPad X1 Carbon Gen 12",
+    "category": "laptops",
+    "price": 1899.99,
+    "description": "Business laptop with Intel Core Ultra 7, 14-inch WUXGA display, military-grade durability, and all-day battery.",
+    "images": [
+       "/images/laptop/4-1.jpeg",
+     "/images/laptop/4-2.jpeg",
+     "/images/laptop/4-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 98
+    },
+    "thumbnail": "/images/laptop/4-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 15,
+    "title": "Microsoft Surface Laptop Studio 2",
+    "category": "laptops",
+    "price": 1999.99,
+    "description": "Versatile 2-in-1 with 14.4-inch PixelSense touchscreen, Intel Core i7, NVIDIA RTX 4060, and unique hinge design.",
+    "images": [
+       "/images/laptop/5-1.jpeg",
+     "/images/laptop/5-2.jpeg",
+     "/images/laptop/5-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 87
+    },
+    "thumbnail": "/images/laptop/5-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 16,
+    "title": "Sony WF-1000XM5",
+    "category": "earbuds",
+    "price": 299.99,
+    "description": "Industry-leading noise canceling with V2 processor, 24-hour battery life, and exceptional sound quality.",
+    "images": [
+      "/images/earbuds/1-1.jpeg",
+      "/images/earbuds/1-2.jpeg"
+      ,"/images/earbuds/1-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 203
+    },
+    "thumbnail": "/images/earbuds/1-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 17,
+    "title": "Apple AirPods Pro 3rd Gen",
+    "category": "earbuds",
+    "price": 249.99,
+    "description": "Next-generation AirPods with H2 chip, adaptive transparency, personalized spatial audio, and USB-C charging.",
+    "images": [
+      "/images/earbuds/2-1.jpeg",
+      "/images/earbuds/2-2.jpeg"
+      ,"/images/earbuds/2-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.7,
+      "count": 312
+    },
+    "thumbnail":"/images/earbuds/2-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 18,
+    "title": "Bose QuietComfort Earbuds 2",
+    "category": "earbuds",
+    "price": 279.99,
+    "description": "Personalized noise cancellation, premium audio performance, and comfortable all-day wear with 6-hour battery.",
+    "images": [
+      "/images/earbuds/3-1.jpeg",
+      "/images/earbuds/3-2.jpeg"
+      ,"/images/earbuds/3-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 156
+    },
+    "thumbnail": "/images/earbuds/3-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 19,
+    "title": "Samsung Galaxy Buds3 Pro",
+    "category": "earbuds",
+    "price": 249.99,
+    "description": "AI-powered noise canceling, blade design, 360 Audio, and Galaxy AI integration with 30-hour total battery.",
+    "images": [
+      "/images/earbuds/4-1.jpeg",
+      "/images/earbuds/4-2.jpeg"
+      ,"/images/earbuds/4-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 189
+    },
+    "thumbnail": "/images/earbuds/4-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 20,
+    "title": "Anker Soundcore Liberty 4 NC",
+    "category": "earbuds",
+    "price": 99.99,
+    "description": "Adaptive noise canceling, Hi-Res wireless audio, 10-hour playtime, and customizable EQ via app.",
+    "images": [
+      "/images/earbuds/5-1.jpeg",
+      "/images/earbuds/5-2.jpeg"
+      ,"/images/earbuds/5-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 145
+    },
+    "thumbnail": "/images/earbuds/5-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 21,
+    "title": "Nike Air Zoom Pegasus 41",
+    "category": "shoes",
+    "price": 139.99,
+    "description": "Responsive running shoes with React foam, Zoom Air unit, and engineered mesh upper for breathability.",
+    "images": [
+      "/images/shoe/1-1.jpeg",
+      "/images/shoe/1-2.jpeg",
+      "/images/shoe/1-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 267
+    },
+    "thumbnail": "/images/shoe/1-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 22,
+    "title": "Adidas Ultraboost 23",
+    "category": "shoes",
+    "price": 189.99,
+    "description": "Energy-returning BOOST midsole, Primeknit+ upper, and Continental rubber outsole for ultimate comfort.",
+    "images": [
+      "/images/shoe/2-1.jpeg",
+      "/images/shoe/2-2.jpeg",
+      "/images/shoe/2-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 198
+    },
+    "thumbnail": "/images/shoe/2-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 23,
+    "title": "Timberland 6-Inch Premium Boot",
+    "category": "shoes",
+    "price": 199.99,
+    "description": "Iconic waterproof leather boots with anti-fatigue technology and durable Vibram outsole for all terrains.",
+    "images": [
+     "/images/shoe/3-1.jpeg",
+      "/images/shoe/3-2.jpeg",
+      "/images/shoe/3-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.7,
+      "count": 156
+    },
+    "thumbnail": "/images/shoe/3-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 24,
+    "title": "Cole Haan ØriginalGrand Wingtip Oxford",
+    "category": "shoes",
+    "price": 179.99,
+    "description": "Modern dress shoes combining traditional craftsmanship with athletic-inspired comfort and lightweight design.",
+    "images": [
+     "/images/shoe/4-1.jpeg",
+      "/images/shoe/4-2.jpeg",
+      "/images/shoe/4-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 89
+    },
+    "thumbnail": "/images/shoe/4-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  },
+  {
+    "id": 25,
+    "title": "Allbirds Tree Runners",
+    "category": "shoes",
+    "price": 98.99,
+    "description": "Sustainable sneakers made from eucalyptus tree fiber, machine washable, and carbon-neutral shipping.",
+    "images": [
+      "/images/shoe/5-1.jpeg",
+      "/images/shoe/5-2.jpeg",
+      "/images/shoe/5-3.jpeg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 123
+    },
+    "thumbnail": "/images/shoe/5-1.jpeg",
+    "reviews": [
+    {
+      "username": "tech_guru91",
+      "comment": "Absolutely love the camera quality and the titanium design! Worth the upgrade.",
+      "rating": 5,
+      "date": "2025-07-25"
+    },
+    {
+      "username": "youtuber",
+      "comment": "Performance is lightning fast. Only wish the battery lasted a bit longer.",
+      "rating": 4,
+      "date": "2025-07-18"
+    },
+    {
+      "username": "sarahlovesgadgets",
+      "comment": "The 5x zoom is a game changer for mobile photography.",
+      "rating": 5,
+      "date": "2025-06-29"
+    }
+  ]
+  }
+]
