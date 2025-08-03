@@ -100,7 +100,6 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white px-4 py-16">
       <div className="max-w-7xl mx-auto space-y-20">
-       
         <section className="text-center max-w-3xl mx-auto" data-aos="fade-up">
           <h1 className="text-5xl font-extrabold text-primary mb-4">
             Get in Touch with Us
@@ -110,17 +109,21 @@ const ContactPage = () => {
           </p>
         </section>
 
-       
-        <section className="overflow-hidden rounded-3xl shadow-xl" data-aos="zoom-in">
+        <section
+          className="overflow-hidden rounded-3xl shadow-xl"
+          data-aos="zoom-in"
+        >
           <img
             src="/images/contact-banner.jpg"
             alt="Customer Service"
-            className="w-full h-80 object-cover"
+            className="w-full h-40 md:h-80 object-cover"
           />
         </section>
 
-        
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10" data-aos="fade-up">
+        <section
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+          data-aos="fade-up"
+        >
           {featureCards.map((item, i) => (
             <motion.div
               key={i}
@@ -129,15 +132,18 @@ const ContactPage = () => {
               className={`bg-gradient-to-br ${item.bg} p-6 rounded-2xl shadow-xl hover:shadow-2xl border border-white/30 backdrop-blur-sm transition`}
             >
               <div className="text-4xl text-primary mb-4">{item.icon}</div>
-              <h4 className="text-xl font-semibold text-black mb-1">{item.title}</h4>
+              <h4 className="text-xl font-semibold text-black mb-1">
+                {item.title}
+              </h4>
               <p className="text-muted">{item.text}</p>
             </motion.div>
           ))}
         </section>
 
-        
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start" data-aos="fade-up">
-         
+        <section
+          className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
+          data-aos="fade-up"
+        >
           <div className="block">
             <img
               src="/images/getInTouch.jpg"
@@ -146,13 +152,16 @@ const ContactPage = () => {
             />
           </div>
 
-         
           <div>
-            <h3 className="text-3xl font-bold text-primary mb-4">Send Us a Message</h3>
+            <h3 className="text-3xl font-bold text-primary mb-4">
+              Send Us a Message
+            </h3>
             <form onSubmit={handleSubmit} className="space-y-5">
               {["name", "email", "subject", "message"].map((field, i) => (
                 <div key={i}>
-                  <label className="block text-sm text-muted mb-1 capitalize">{field}</label>
+                  <label className="block text-sm text-muted mb-1 capitalize">
+                    {field}
+                  </label>
                   {field === "message" ? (
                     <textarea
                       name={field}
@@ -190,8 +199,10 @@ const ContactPage = () => {
           </div>
         </section>
 
-    
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center" data-aos="fade-up">
+        <section
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center"
+          data-aos="fade-up"
+        >
           {contactInfoCards.map((info, i) => (
             <motion.div
               key={i}

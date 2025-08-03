@@ -22,9 +22,10 @@ const HomePage = () => {
   return (
     <div className="bg-background">
       <section
-        className="relative w-full h-[80vh] bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/hero-banner.jpg')" }}
-      >
+  className="relative w-full h-[60vh] md:h-[90vh] bg-cover bg-center bg-no-repeat l"
+  style={{ backgroundImage: "url('/images/hero-banner.jpg')" }}
+
+>
         
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm md:backdrop-blur-0"></div>
 
@@ -94,6 +95,7 @@ const HomePage = () => {
               src="/images/home-about.jpg"
               alt="About ShopyVia"
               className="w-full h-[500px] object-cover rounded-xl shadow-xl"
+              loading="lazy"
             />
           </div>
 

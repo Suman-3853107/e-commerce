@@ -35,6 +35,7 @@ const Register = () => {
           src="/images/register.jpg"
           alt="Register Illustration"
           className="w-full h-full object-cover mt-2"
+          loading="lazy"
         />
       </div>
 

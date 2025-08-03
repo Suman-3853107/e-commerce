@@ -31,6 +31,7 @@ const Login = () => {
           src="/images/login1.jpg"
           alt="Login"
           className="w-full h-full object-cover md:rounded-tr-[60px] md:rounded-br-[60px] shadow-lg mt-2"
+          loading="lazy"
         />
       </div>
 
