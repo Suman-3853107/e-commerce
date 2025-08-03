@@ -63,7 +63,7 @@ const CheckoutPage = () => {
         </div>
       ))}
 
-      {/* Address */}
+     
       <div className="mb-4">
         <label className="block font-medium mb-2">Delivery Address</label>
         <textarea
@@ -74,7 +74,7 @@ const CheckoutPage = () => {
         />
       </div>
 
-      {/* Payment */}
+
       <div className="mb-6">
         <label className="block font-medium mb-2">Payment Method</label>
         <div className="flex items-center gap-2">
@@ -83,7 +83,6 @@ const CheckoutPage = () => {
         </div>
       </div>
 
-      {/* Total */}
       <div className="text-right font-semibold mb-6 text-xl text-primary">
         Total: ${total.toFixed(2)}
       </div>

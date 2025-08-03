@@ -1,22 +1,43 @@
 import React from 'react';
-import { FaShoppingCart, FaHeart, FaUser, FaSearch, FaHome, FaThLarge, FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
+import {
+  FaShoppingCart,
+  FaHeart,
+  FaUser,
+  FaHome,
+  FaThLarge,
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaClock
+} from 'react-icons/fa';
+
+
+const iconMap = {
+  home: FaHome,
+  wishlist: FaHeart,
+  cart: FaShoppingCart,
+  profile: FaUser,
+};
 
 const Footer = () => {
   const categories = ["mobiles", "laptops", "watches", "earbuds", "shoes"];
-  
+
   const quickLinks = [
-    { icon: <FaHome size={16} />, label: "Home", href: "/" },
-    { icon: <FaSearch size={16} />, label: "Search", href: "/search" },
-    { icon: <FaHeart size={16} />, label: "Wishlist", href: "/wishlist" },
-    { icon: <FaShoppingCart size={16} />, label: "Cart", href: "/cart" },
-    { icon: <FaUser size={16} />, label: "Profile", href: "/profile" }
+    { iconKey: "home", label: "Home", href: "/" },
+    { iconKey: "wishlist", label: "Wishlist", href: "/wishlist" },
+    { iconKey: "cart", label: "Cart", href: "/cart" },
+    { iconKey: "profile", label: "Profile", href: "/profile" },
   ];
 
   return (
     <footer className="bg-gradient-to-r from-slate-900 via-gray-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          
+
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent tracking-wide">
@@ -45,21 +66,24 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href={link.href} 
-                    className="flex items-center space-x-3 text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300"
-                  >
-                    {link.icon}
-                    <span>{link.label}</span>
-                  </a>
-                </li>
-              ))}
+              {quickLinks.map((link, index) => {
+                const Icon = iconMap[link.iconKey];
+                return (
+                  <li key={index}>
+                    <a
+                      href={link.href}
+                      className="flex items-center space-x-3 text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300"
+                    >
+                      <Icon size={16} />
+                      <span>{link.label}</span>
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
-          {/* Categories */}
+        
           <div className="space-y-4">
             <h4 className="text-lg font-semibold flex items-center space-x-2">
               <FaThLarge size={18} />
@@ -68,8 +92,8 @@ const Footer = () => {
             <ul className="space-y-3">
               {categories.map((category, index) => (
                 <li key={index}>
-                  <a 
-                    href={`/category/${category}`} 
+                  <a
+                    href={`/category/${category}`}
                     className="text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300 capitalize block"
                   >
                     {category}
@@ -79,19 +103,37 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+    
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Contact Us</h4>
             <div className="space-y-3 text-gray-300 text-sm">
-              <p>📧 support@shopyvia.com</p>
-              <p>📞 +91 98765 43210</p>
-              <p>🏢 123 Business Street<br />Madurai, Tamil Nadu 625001</p>
-              <p>🕒 Mon - Sat: 9AM - 9PM<br />Sunday: 10AM - 6PM</p>
+              <p className="flex items-center space-x-2">
+                <FaEnvelope size={14} className="text-yellow-400" />
+                <span>support@shopyvia.com</span>
+              </p>
+              <p className="flex items-center space-x-2">
+                <FaPhoneAlt size={14} className="text-green-400" />
+                <span>+91 98765 43210</span>
+              </p>
+              <p className="flex items-start space-x-2">
+                <FaMapMarkerAlt size={14} className="text-red-400 mt-1" />
+                <span>
+                  123 Business Street<br />
+                  Madurai, Tamil Nadu 625001
+                </span>
+              </p>
+              <p className="flex items-start space-x-2">
+                <FaClock size={14} className="text-blue-400 mt-1" />
+                <span>
+                  Mon - Sat: 9AM - 9PM<br />
+                  Sunday: 10AM - 6PM
+                </span>
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Bottom Section */}
+     
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm text-center md:text-left">
             © 2024 ShopyVia. All rights reserved.

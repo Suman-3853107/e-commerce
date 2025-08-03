@@ -1,28 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import WishlistButton from "../components/WishListButton";
+import { useAuth } from "../context/AuthContext";
+import { toast } from "react-toastify";
 
 const ProductCard = ({ product, onAddToCart }) => {
+  const { isLoggedIn } = useAuth();
   const detailsLink = `/productDetails/${product.id}`;
-  const discountPercentage = product.originalPrice 
-    ? Math.round(100 - (product.price / product.originalPrice * 100))
-    : 0;
+  
+const handleAddToCart = () => {
+  if (!isLoggedIn()) {
+    toast.error("Please login to add products to your cart.");
+    return;
+  }
 
+  onAddToCart(product);
+};
   return (
     <div className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden relative flex flex-col h-full border border-gray-100 hover:border-gray-200">
-      {/* Discount Badge */}
-      {discountPercentage > 0 && (
-        <div className="absolute top-3 left-3 z-10 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md shadow-sm">
-          {discountPercentage}% OFF
-        </div>
-      )}
+    
+      
 
-      {/* Wishlist Heart */}
+ 
       <div className="absolute top-3 right-3 z-10">
         <WishlistButton product={product} />
       </div>
 
-      {/* Product Image */}
+      
       <Link to={detailsLink} className="block flex-grow">
         <div className="w-full h-56 overflow-hidden bg-gray-50 flex items-center justify-center p-4">
           <img
@@ -33,9 +37,9 @@ const ProductCard = ({ product, onAddToCart }) => {
         </div>
       </Link>
 
-      {/* Content & Button Container */}
+   
       <div className="p-4 flex flex-col">
-        {/* Product Info */}
+        
         <div className="mb-3">
           <p className="text-xs text-gray-500 mb-1 uppercase tracking-wider font-medium">
             {product.category}
@@ -47,7 +51,7 @@ const ProductCard = ({ product, onAddToCart }) => {
             </h3>
           </Link>
 
-          {/* Rating */}
+         
           {product.rating && (
             <div className="flex items-center text-sm mt-1 mb-2">
               <div className="flex mr-1">
@@ -69,11 +73,11 @@ const ProductCard = ({ product, onAddToCart }) => {
           )}
         </div>
 
-        {/* Price & Button Container */}
+       
         <div className="mt-auto">
-          {/* Price */}
+      
           <div className="flex items-center justify-between mb-3">
-            <span className="text-lg font-bold text-gray-900">${product.price}</span>
+            <span className="text-lg font-bold text-gray-900">₹{product.price}</span>
             {product.originalPrice && (
               <span className="text-sm text-gray-400 line-through">
                 ${product.originalPrice}
@@ -81,9 +85,9 @@ const ProductCard = ({ product, onAddToCart }) => {
             )}
           </div>
 
-          {/* Add to Cart Button */}
+         
           <button
-            onClick={() => onAddToCart(product)}
+            onClick={handleAddToCart}
             className="w-full py-2.5 bg-primary hover:bg-primary-dark text-white rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2"
           >
             <svg 
@@ -108,4 +112,4 @@ const ProductCard = ({ product, onAddToCart }) => {
   );
 };
 
-export default ProductCard;
+export default ProductCard; 

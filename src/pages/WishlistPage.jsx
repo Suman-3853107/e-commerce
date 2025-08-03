@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaHeartBroken } from "react-icons/fa";
 import ProductCard from "../components/ProductCard";
 import { useCart } from "../context/CartContext";
-import { toast } from "react-toastify"; // Optional: for feedback
+import { toast } from "react-toastify"; 
 
 const WishlistPage = () => {
   const { wishlist } = useWishlist();
@@ -12,15 +12,15 @@ const WishlistPage = () => {
 
   const handleAddToCart = (product) => {
     const { message } = addToCart(product);
-    toast.success(message); // Optional: Show toast on add
+    toast.success(message); 
   };
 
   if (wishlist.length === 0) {
     return (
-      <div className="min-h-[60vh] flex items-center justify-center">
+      <div className="min-h-[100vh] flex items-center justify-center">
         <div className="text-center">
           <FaHeartBroken className="text-4xl text-muted mx-auto mb-4" />
-          <h2 className="text-2xl font-semibold mb-4">Your Wishlist is Empty 💔</h2>
+          <h2 className="text-2xl font-semibold mb-4">Your Wishlist is Empty</h2>
           <Link
             to="/products"
             className="bg-primary text-white px-6 py-2 rounded hover:bg-primary/90 transition"

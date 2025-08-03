@@ -1,4 +1,4 @@
-// src/pages/CartPage.jsx
+
 import React from "react";
 import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
@@ -32,7 +32,7 @@ const CartPage = () => {
 
   if (cart.length === 0) {
     return (
-      <div className="min-h-[60vh] flex items-center justify-center">
+      <div className="min-h-[100vh] flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-semibold mb-4">Your Cart is Empty 🛒</h2>
           <Link
@@ -98,7 +98,7 @@ const CartPage = () => {
         ))}
       </div>
 
-      {/* Summary */}
+      
       <div className="mt-10 flex justify-between items-center border-t pt-6">
         <div>
           <p className="text-muted text-sm">

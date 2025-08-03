@@ -1,4 +1,4 @@
-// src/context/WishlistContext.js
+
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 const WishlistContext = createContext();
@@ -6,7 +6,7 @@ const WishlistContext = createContext();
 export const WishlistProvider = ({ children }) => {
   const [wishlist, setWishlist] = useState([]);
 
-  // 🔁 Load from localStorage on mount
+  
   useEffect(() => {
     const stored = localStorage.getItem("wishlistData");
     if (stored) {
@@ -19,34 +19,33 @@ export const WishlistProvider = ({ children }) => {
     }
   }, []);
 
-  // 💾 Save to localStorage when wishlist changes
+
   useEffect(() => {
     localStorage.setItem("wishlistData", JSON.stringify(wishlist));
   }, [wishlist]);
 
-  // ✅ Add or remove item from wishlist
+  
   const toggleWishlist = (product) => {
     setWishlist((prev) => {
       const exists = prev.find((item) => item.id === product.id);
       if (exists) {
-        return prev.filter((item) => item.id !== product.id); // remove
+        return prev.filter((item) => item.id !== product.id); 
       } else {
-        return [...prev, product]; // add
+        return [...prev, product]; 
       }
     });
   };
 
-  // ✅ Check if a product is in the wishlist
   const isInWishlist = (productId) => {
     return wishlist.some((item) => item.id === productId);
   };
 
-  // ✅ Clear wishlist
+  
   const clearWishlist = () => {
     setWishlist([]);
   };
 
-  // ✅ Get wishlist items
+
   const getWishlist = () => {
     return wishlist;
   };
@@ -66,5 +65,5 @@ export const WishlistProvider = ({ children }) => {
   );
 };
 
-// 🔁 Custom hook
+
 export const useWishlist = () => useContext(WishlistContext);

@@ -12,7 +12,7 @@ const ProfilePage = () => {
     fullName: "",
     phone: "",
     address: "",
-    profileImage: "/images/avatar.png", // default
+    profileImage: "/images/avatar.png", 
   });
 
   const [isEditing, setIsEditing] = useState(false);
@@ -51,17 +51,18 @@ const ProfilePage = () => {
     <div className="max-w-4xl mx-auto px-6 py-12 bg-gray-50 shadow-lg rounded-lg mt-10">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-3xl font-bold text-primary">My Profile</h2>
-        <button
-          onClick={logout}
-          className="flex items-center gap-2 text-red-500 hover:text-red-700 transition duration-200"
-        >
-          <FiLogOut />
-          Logout
-        </button>
+       <button
+  onClick={logout}
+  className="flex items-center gap-2 px-4 py-2 text-white bg-red-600 hover:bg-red-700 transition duration-300 rounded-lg shadow-md hover:shadow-lg font-semibold"
+>
+  <FiLogOut className="text-xl" />
+  Logout
+</button>
+
       </div>
 
       <div className="flex flex-col md:flex-row gap-10">
-        {/* Left: Profile Image */}
+   
         <div className="flex flex-col items-center">
           <div className="relative w-32 h-32 mb-4">
             <img
@@ -69,28 +70,11 @@ const ProfilePage = () => {
               alt="Profile"
               className="w-full h-full rounded-full object-cover border-4 border-primary shadow-md"
             />
-            {isEditing && (
-              <>
-                <label
-                  htmlFor="upload-image"
-                  className="absolute bottom-0 right-0 bg-primary text-white p-1 rounded-full cursor-pointer shadow-lg hover:bg-primary/80 transition duration-200"
-                  title="Change Profile Image"
-                >
-                  <FiUpload />
-                </label>
-                <input
-                  id="upload-image"
-                  type="file"
-                  accept="image/*"
-                  onChange={handleImageUpload}
-                  className="hidden"
-                />
-              </>
-            )}
+            
           </div>
         </div>
 
-        {/* Right: User Info */}
+        
         <div className="flex-1 space-y-5">
           <div>
             <label className="text-sm text-muted">Full Name</label>
@@ -142,7 +126,7 @@ const ProfilePage = () => {
             )}
           </div>
 
-          {/* Action Buttons */}
+        
           <div className="flex justify-between items-center mt-6">
             {isEditing ? (
               <button
@@ -171,7 +155,7 @@ const ProfilePage = () => {
               </Link>
               <Link
                 to="/wishlist"
-                className="flex items-center gap-2 bg-secondary text-white px-4 py-2 rounded hover:bg-secondary/90 transition duration-200"
+                className="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition duration-200"
               >
                 <FaHeart />
                 Wishlist

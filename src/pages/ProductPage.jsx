@@ -64,12 +64,12 @@ const ProductPage = () => {
   return (
     <div className="bg-background min-h-screen px-4 py-10">
       <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
+       
         <h1 className="text-4xl font-bold text-primary mb-8 text-center" data-aos="fade-down">
           Explore Our Products
         </h1>
 
-        {/* Category Tabs */}
+        
         <div
           className="flex overflow-x-auto sm:justify-center gap-3 mb-10 px-2 scrollbar-hide"
           data-aos="fade-up"
@@ -99,7 +99,7 @@ const ProductPage = () => {
           ))}
         </div>
 
-        {/* Product Grid */}
+       
         <div
           className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
           data-aos="fade-up"

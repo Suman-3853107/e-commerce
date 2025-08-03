@@ -27,18 +27,28 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 bg-gray-50">
-      {/* Left: Form Section */}
-      <div
-        className="flex flex-col justify-center items-center px-8 py-12"
-        data-aos="fade-right"
-      >
+    <div className="min-h-screen flex flex-col md:grid md:grid-cols-2 bg-gray-50">
+      
+      
+      <div className="h-64 md:h-full w-full overflow-hidden md:rounded-tr-[60px] md:rounded-br-[60px] shadow-xl">
+        <img
+          src="/images/register.jpg"
+          alt="Register Illustration"
+          className="w-full h-full object-cover mt-2"
+        />
+      </div>
+
+     
+      <div className="flex items-center justify-center px-6 sm:px-10 py-10 md:py-16 bg-white md:bg-transparent">
         <div className="w-full max-w-md">
-          <h2 className="text-4xl font-bold text-primary mb-4">Create Account</h2>
-          <p className="text-muted mb-6 text-sm">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-2 text-center md:text-left">
+            Create Account
+          </h2>
+          <p className="text-sm text-gray-600 mb-6 text-center md:text-left">
             Join us and explore the best shopping experience with top deals.
           </p>
 
+          
           <button
             onClick={() => alert("Google login coming soon")}
             className="flex items-center justify-center gap-3 w-full border border-gray-300 rounded-md py-2 hover:bg-gray-100 transition mb-6"
@@ -49,14 +59,14 @@ const Register = () => {
             </span>
           </button>
 
-          {/* OR Divider */}
+       
           <div className="flex items-center mb-4">
             <div className="flex-grow h-px bg-gray-300" />
             <span className="mx-2 text-sm text-gray-500">or</span>
             <div className="flex-grow h-px bg-gray-300" />
           </div>
 
-          {/* Form */}
+         
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
@@ -101,15 +111,6 @@ const Register = () => {
             </Link>
           </p>
         </div>
-      </div>
-
-      {/* Right: Illustration */}
-      <div className="hidden md:block h-full w-full" data-aos="fade-left">
-        <img
-          src="/images/register.jpg"
-          alt="Register Illustration"
-          className="w-full h-full object-cover"
-        />
       </div>
     </div>
   );

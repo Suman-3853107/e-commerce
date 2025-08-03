@@ -4,8 +4,11 @@ import WishlistButton from "../components/WishListButton";
 import ProductCard from "../components/ProductCard";
 import { useCart } from "../context/CartContext";
 import { toast } from "react-toastify";
+import { useAuth } from "../context/AuthContext";
+
 
 const ProductDetails = () => {
+  const { isLoggedIn } = useAuth();
   const { id } = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
@@ -33,15 +36,21 @@ const ProductDetails = () => {
   );
 
   const handleAddToCart = () => {
+    if (!isLoggedIn()) {
+    toast.error("Please login to add products to your cart.");
+    return;
+  }
     const { message } = addToCart(product);
     toast.success(message);
   };
 
+  
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
-      {/* Product Info Section */}
+      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Left: Image Gallery */}
+        
         <div>
           <div className="relative mb-4 rounded-lg overflow-hidden border bg-white">
             <div className="w-full h-[350px] md:h-[500px] flex items-center justify-center">
@@ -70,7 +79,6 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        {/* Right: Product Info */}
         <div className="flex flex-col justify-between">
           <div>
             <h1 className="text-3xl font-bold text-primary mb-3">{product.title}</h1>
@@ -84,7 +92,7 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          {/* Buttons */}
+    
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <button
               onClick={handleAddToCart}
@@ -102,7 +110,7 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      {/* Reviews */}
+   
       {product.reviews && product.reviews.length > 0 && (
         <div className="mt-16">
           <h2 className="text-2xl font-semibold text-primary mb-4">Customer Reviews</h2>
@@ -127,7 +135,6 @@ const ProductDetails = () => {
         </div>
       )}
 
-      {/* Related Products */}
       {relatedProducts.length > 0 && (
         <div className="mt-16">
           <h2 className="text-2xl font-semibold mb-6 text-primary">Related Products</h2>

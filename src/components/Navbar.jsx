@@ -1,48 +1,52 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  FaShoppingCart,
-  FaHeart,
-  FaUser,
-  FaSearch
-} from "react-icons/fa";
+import { FaShoppingCart, FaHeart, FaUser } from "react-icons/fa";
+import SearchInput from "./SearchInput";
+import { useCart } from "../context/CartContext"; 
 
 const categories = ["all", "mobiles", "laptops", "watches", "earbuds", "shoes"];
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [productOpen, setProductOpen] = useState(false);
+  const { getCartCount } = useCart();
+  const cartCount = getCartCount();
+
+  const HoverIcon = ({ to, icon, label }) => (
+    <Link to={to} className="relative group">
+      <div className="transition duration-300 ease-in-out transform group-hover:scale-110 group-hover:rotate-6 text-white">
+        {React.cloneElement(icon, {
+          className:
+            "transition-transform duration-300 group-hover:scale-110 group-hover:text-yellow-400",
+        })}
+      </div>
+      <span className="absolute left-1/2 -bottom-9 transform -translate-x-1/2 scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black/80 text-white text-xs px-3 py-1 rounded-md backdrop-blur-md shadow-lg z-50 whitespace-nowrap">
+        {label}
+      </span>
+    </Link>
+  );
 
   return (
     <header className="bg-gradient-to-r from-slate-900 via-gray-900 to-slate-900 shadow-2xl sticky top-0 z-50 border-b border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        {/* Left section: Logo and Search (on mobile) */}
         <div className="flex items-center space-x-3 md:space-x-6">
-          {/* Logo */}
           <Link to="/" className="group">
             <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent tracking-wide hover:scale-105 transition-transform duration-300">
               Shopy<span className="text-yellow-400">Via</span>
             </div>
           </Link>
-
-          {/* Search input */}
-          <div className="relative flex md:hidden">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="bg-gray-800 text-xs text-white pl-3 pr-7 py-1.5 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500"
-            />
-            <FaSearch className="absolute right-2 top-2 text-white pointer-events-none text-xs" />
+          <div className="ml-auto md:hidden">
+            <SearchInput className="w-36 ms-32" inputSize="sm" />
           </div>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6 text-gray-300">
-          <Link to="/" className="hover:text-white hover:border-b-2 hover:border-red-500 pb-1 transition-all">Home</Link>
+          <Link to="/" className="hover:text-white hover:border-b-2 hover:border-red-500 pb-1 transition-all font-mono">Home</Link>
           <div className="relative">
             <button
               onClick={() => setProductOpen(!productOpen)}
-              className="hover:text-white hover:border-b-2 hover:border-red-500 pb-1 transition-all"
+              className="hover:text-white hover:border-b-2 hover:border-red-500 pb-1 transition-all font-mono"
             >
               Products
             </button>
@@ -64,31 +68,39 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          <Link to="/contact" className="hover:text-white hover:border-b-2 hover:border-red-500 pb-1 transition-all">
+          <Link to="/contact" className="hover:text-white hover:border-b-2 hover:border-red-500 pb-1 transition-all font-mono">
             Contact
           </Link>
         </div>
 
-        {/* Right section: Icons and Hamburger */}
+        {/* Icons */}
         <div className="flex items-center space-x-4">
-          {/* Search input (desktop) */}
-          <div className="relative hidden md:flex">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="bg-gray-800 text-sm text-white pl-3 pr-8 py-1 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500"
-            />
-            <FaSearch className="absolute right-2 top-1.5 text-white pointer-events-none" />
+          <SearchInput className="hidden md:block w-48" inputSize="sm" />
+
+          <div className="hidden md:flex items-center space-x-6 text-white">
+            <HoverIcon to="/wishlist" icon={<FaHeart size={25} />} label="Wishlist" />
+
+           
+            <Link to="/cart" className="relative group">
+              <div className="transition duration-300 ease-in-out transform group-hover:scale-110 group-hover:rotate-6 text-white">
+                <FaShoppingCart
+                  size={25}
+                  className="transition-transform duration-300 group-hover:scale-110 group-hover:text-yellow-400"
+                />
+                {cartCount > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full animate-pulse shadow-md">
+                    {cartCount}
+                  </span>
+                )}
+              </div>
+              <span className="absolute left-1/2 -bottom-9 transform -translate-x-1/2 scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black/80 text-white text-xs px-3 py-1 rounded-md backdrop-blur-md shadow-lg z-50 whitespace-nowrap">
+                Cart
+              </span>
+            </Link>
+
+            <HoverIcon to="/profile" icon={<FaUser size={25} />} label="Profile" />
           </div>
 
-          {/* Icons */}
-          <div className="hidden md:flex items-center space-x-4 text-white">
-            <HoverIcon to="/wishlist" icon={<FaHeart size={20} />} label="Wishlist" />
-            <HoverIcon to="/cart" icon={<FaShoppingCart size={20} />} label="Cart" />
-            <HoverIcon to="/profile" icon={<FaUser size={20} />} label="Profile" />
-          </div>
-
-          {/* Hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors duration-300 focus:outline-none"
@@ -132,24 +144,24 @@ const Navbar = () => {
             )}
           </div>
           <Link to="/contact" className="block py-2 hover:text-yellow-300">Contact</Link>
-          <div className="flex space-x-4 pt-2 text-sm">
-            <Link to="/wishlist"><FaHeart size={16} /></Link>
-            <Link to="/cart"><FaShoppingCart size={16} /></Link>
-            <Link to="/profile"><FaUser size={16} /></Link>
+          <div className="flex space-x-6 pt-2 text-sm">
+            <Link to="/wishlist"><FaHeart size={20} /></Link>
+            <div className="relative">
+              <Link to="/cart">
+                <FaShoppingCart size={20} />
+                {cartCount > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full animate-pulse shadow-md">
+                    {cartCount}
+                  </span>
+                )}
+              </Link>
+            </div>
+            <Link to="/profile"><FaUser size={20} /></Link>
           </div>
         </div>
       )}
     </header>
   );
 };
-
-const HoverIcon = ({ to, icon, label }) => (
-  <Link to={to} className="relative group">
-    {icon}
-    <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 scale-0 group-hover:scale-100 text-xs text-white bg-black px-2 py-1 rounded transition-transform duration-300 whitespace-nowrap">
-      {label}
-    </span>
-  </Link>
-);
 
 export default Navbar;

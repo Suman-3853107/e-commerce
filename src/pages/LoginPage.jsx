@@ -23,26 +23,28 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 bg-gradient-to-br from-[#f9f9ff] to-[#e0e7ff]">
-      {/* Left: Image/Brand Section */}
-      <div className="hidden md:block h-full w-full overflow-hidden rounded-tr-[60px] rounded-br-[60px] shadow-xl" data-aos="zoom-in">
+    <div className="min-h-screen flex flex-col md:grid md:grid-cols-2 bg-gradient-to-br from-[#f9f9ff] to-[#e0e7ff]">
+      
+  
+      <div className="w-full h-64 md:h-full ">
         <img
-          src="/images/login.jpg"
-          alt="Login illustration"
-          className="w-full h-full object-cover"
-          data-aos="zoom-in"
+          src="/images/login1.jpg"
+          alt="Login"
+          className="w-full h-full object-cover md:rounded-tr-[60px] md:rounded-br-[60px] shadow-lg mt-2"
         />
       </div>
 
-      {/* Right: Login Form */}
-      <div className="flex flex-col justify-center px-10 py-16">
-        <div className="max-w-md w-full mx-auto" data-aos="fade-up">
-          <h2 className="text-4xl font-bold text-primary mb-3">Welcome Back 👋</h2>
-          <p className="text-muted text-sm mb-6">
+   
+      <div className="flex items-center justify-center px-6 sm:px-10 py-10 md:py-16 bg-white md:bg-transparent">
+        <div className="w-full max-w-md">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-2 text-center md:text-left">
+            Welcome Back
+          </h2>
+          <p className="text-sm text-gray-600 mb-6 text-center md:text-left">
             Sign in to continue shopping your favorites.
           </p>
 
-          {/* Google Sign-In (dummy) */}
+         
           <button className="flex items-center justify-center gap-3 w-full border border-gray-300 rounded-md py-2 hover:bg-gray-100 transition mb-6">
             <FcGoogle className="text-xl" />
             <span className="text-sm font-medium text-gray-700">
@@ -50,16 +52,15 @@ const Login = () => {
             </span>
           </button>
 
-          {/* Divider */}
+       
           <div className="flex items-center mb-6">
             <div className="flex-grow h-px bg-gray-300" />
             <span className="mx-3 text-gray-400 text-sm">or sign in with email</span>
             <div className="flex-grow h-px bg-gray-300" />
           </div>
 
-          {/* Login Form */}
+          
           <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Email */}
             <div className="relative">
               <FiMail className="absolute left-3 top-3 text-gray-500" />
               <input
@@ -68,12 +69,11 @@ const Login = () => {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
                 required
               />
             </div>
 
-            {/* Password */}
             <div className="relative">
               <FiLock className="absolute left-3 top-3 text-gray-500" />
               <input
@@ -82,7 +82,7 @@ const Login = () => {
                 placeholder="Password"
                 value={formData.password}
                 onChange={handleChange}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
                 required
               />
             </div>
@@ -95,6 +95,7 @@ const Login = () => {
             </button>
           </form>
 
+          
           <p className="mt-6 text-sm text-center text-gray-600">
             Don't have an account?{" "}
             <Link to="/register" className="text-primary font-medium hover:underline">

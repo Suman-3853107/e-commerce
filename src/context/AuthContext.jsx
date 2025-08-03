@@ -4,9 +4,9 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true); // ⏳ Loading flag
+  const [loading, setLoading] = useState(true); 
 
-  // ✅ Load login user from localStorage on mount
+
   useEffect(() => {
     const loginData = localStorage.getItem("loginData");
     if (loginData) {
@@ -16,10 +16,9 @@ export const AuthProvider = ({ children }) => {
         localStorage.removeItem("loginData");
       }
     }
-    setLoading(false); // Done loading
+    setLoading(false); 
   }, []);
 
-  // ✅ Register
   const register = ({ fullName, email, password }) => {
     const users = JSON.parse(localStorage.getItem("registerData")) || [];
 
@@ -36,7 +35,7 @@ export const AuthProvider = ({ children }) => {
     return { success: true };
   };
 
-  // ✅ Login
+
   const login = ({ email, password }) => {
     const stored = localStorage.getItem("registerData");
     if (!stored) return { success: false, message: "No registered users found." };
@@ -55,13 +54,13 @@ export const AuthProvider = ({ children }) => {
     return { success: false, message: "Invalid credentials." };
   };
 
-  // ✅ Logout
+ 
   const logout = () => {
-    localStorage.removeItem("loginData");
-    setUser(null);
-  };
+  ["loginData", "Wishlistdata", "cartData","profileData"].forEach((key) => localStorage.removeItem(key));
+  setUser(null);
+};
 
-  // ✅ Check logged in
+ 
   const isLoggedIn = () => !!user;
 
   return (
@@ -73,5 +72,5 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-// ✅ Custom hook
+
 export const useAuth = () => useContext(AuthContext);
