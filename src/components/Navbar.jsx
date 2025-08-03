@@ -36,7 +36,7 @@ const Navbar = () => {
             </div>
           </Link>
           <div className="ml-auto md:hidden">
-            <SearchInput className="w-36 ms-32" inputSize="sm" />
+            <SearchInput className="w-36 ms-8" inputSize="sm" />
           </div>
         </div>
 
@@ -73,7 +73,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Icons */}
+        
         <div className="flex items-center space-x-4">
           <SearchInput className="hidden md:block w-48" inputSize="sm" />
 
