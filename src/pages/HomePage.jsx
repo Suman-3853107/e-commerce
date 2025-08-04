@@ -40,7 +40,7 @@ const HomePage = () => {
             </p>
             <Link
               to="/products"
-              className="inline-block bg-accent text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-accent/90 transition"
+              className="inline-block bg-accent text-black px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-accent/90 transition"
             >
               Shop Now
             </Link>

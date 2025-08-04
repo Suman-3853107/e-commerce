@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FiMail, FiLock } from "react-icons/fi";
 import { useAuth } from "../context/AuthContext";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -18,7 +19,7 @@ const Login = () => {
     if (result.success) {
       navigate("/");
     } else {
-      alert(result.message || "Invalid credentials");
+      toast.error(result.message || "Invalid credentials");
     }
   };
 

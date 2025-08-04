@@ -78,13 +78,13 @@ const Navbar = () => {
           <SearchInput className="hidden md:block w-48" inputSize="sm" />
 
           <div className="hidden md:flex items-center space-x-6 text-white">
-            <HoverIcon to="/wishlist" icon={<FaHeart size={25} />} label="Wishlist" />
+            <HoverIcon to="/wishlist" icon={<FaHeart size={28} />} label="Wishlist" />
 
            
             <Link to="/cart" className="relative group">
               <div className="transition duration-300 ease-in-out transform group-hover:scale-110 group-hover:rotate-6 text-white">
                 <FaShoppingCart
-                  size={25}
+                  size={30}
                   className="transition-transform duration-300 group-hover:scale-110 group-hover:text-yellow-400"
                 />
                 {cartCount > 0 && (
@@ -98,7 +98,7 @@ const Navbar = () => {
               </span>
             </Link>
 
-            <HoverIcon to="/profile" icon={<FaUser size={25} />} label="Profile" />
+            <HoverIcon to="/profile" icon={<FaUser size={28} />} label="Acount" />
           </div>
 
           <button

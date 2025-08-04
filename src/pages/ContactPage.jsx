@@ -100,14 +100,14 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white px-4 py-16">
       <div className="max-w-7xl mx-auto space-y-20">
-        <section className="text-center max-w-3xl mx-auto" data-aos="fade-up">
+        {/* <section className="text-center max-w-3xl mx-auto" data-aos="fade-up">
           <h1 className="text-5xl font-extrabold text-primary mb-4">
             Get in Touch with Us
           </h1>
           <p className="text-muted text-lg">
             Questions or concerns? Our support team is always available to help!
           </p>
-        </section>
+        </section> */}
 
         <section
           className="overflow-hidden rounded-3xl shadow-xl"

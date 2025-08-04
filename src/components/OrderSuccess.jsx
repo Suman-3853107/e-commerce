@@ -8,16 +8,23 @@ const OrderSuccess = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/");
-    }, 3000); 
-
-    return () => clearTimeout(timer); 
+    }, 3000);
+    return () => clearTimeout(timer);
   }, [navigate]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh] text-center animate-fade-in">
-      <FaCheckCircle className="text-green-500 text-6xl mb-4 animate-ping-once" />
-      <h2 className="text-3xl font-bold text-primary mb-2">Order Placed Successfully!</h2>
-      <p className="text-muted text-sm">You’ll be redirected to the homepage shortly...</p>
+    <div className="flex items-center justify-center min-h-[80vh] bg-gradient-to-br from-gradientStart to-gradientEnd px-4">
+      <div className="bg-card shadow-xl rounded-2xl p-8 md:p-12 text-center animate-fadeIn">
+        <div className="flex justify-center mb-4 animate-slideIn">
+          <FaCheckCircle className="text-success text-6xl shadow-lg" />
+        </div>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-2 animate-fadeIn">
+          Order Placed Successfully!
+        </h2>
+        <p className="text-muted text-base md:text-lg animate-slideIn">
+          You’ll be redirected to the homepage shortly...
+        </p>
+      </div>
     </div>
   );
 };

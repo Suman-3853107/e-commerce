@@ -9,10 +9,15 @@ const CheckoutPage = () => {
   const { cart, clearCart } = useCart();
 
   const [product, setProduct] = useState(null);
-  const [address, setAddress] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
-
   const [allProducts, setAllProducts] = useState([]);
+
+  const [address, setAddress] = useState({
+    doorNo: "",
+    street: "",
+    city: "",
+    pinCode: "",
+  });
 
   useEffect(() => {
     fetch("/products.json")
@@ -38,10 +43,17 @@ const CheckoutPage = () => {
   );
 
   const handleConfirm = () => {
-    if (!address.trim()) {
-      toast.error("Enter a delivery address.");
+    const { doorNo, street, city, pinCode } = address;
+
+    if (!doorNo || !street || !city || !pinCode) {
+      toast.error("Please complete all address fields.");
       return;
     }
+
+   
+    const fullAddress = `${doorNo}, ${street}, ${city} - ${pinCode}`;
+    console.log("Full Address:", fullAddress);
+
     setShowSuccess(true);
     clearCart();
   };
@@ -54,7 +66,7 @@ const CheckoutPage = () => {
 
       {itemsToShow.map((item) => (
         <div key={item.id} className="flex gap-4 mb-6 border-b pb-4">
-          <img src={item.thumbnail} className="w-24 h-24 object-contain" />
+          <img src={item.thumbnail} className="w-24 h-24 object-contain" alt={item.title} />
           <div>
             <h3 className="font-semibold text-lg">{item.title}</h3>
             <p className="text-sm text-muted capitalize">{item.category}</p>
@@ -64,17 +76,41 @@ const CheckoutPage = () => {
       ))}
 
      
-      <div className="mb-4">
+      <div className="mb-6">
         <label className="block font-medium mb-2">Delivery Address</label>
-        <textarea
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-          className="w-full border rounded p-3"
-          rows="4"
-        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input
+            type="text"
+            placeholder="Door No"
+            value={address.doorNo}
+            onChange={(e) => setAddress({ ...address, doorNo: e.target.value })}
+            className="border rounded p-3 w-full"
+          />
+          <input
+            type="text"
+            placeholder="Street"
+            value={address.street}
+            onChange={(e) => setAddress({ ...address, street: e.target.value })}
+            className="border rounded p-3 w-full"
+          />
+          <input
+            type="text"
+            placeholder="City"
+            value={address.city}
+            onChange={(e) => setAddress({ ...address, city: e.target.value })}
+            className="border rounded p-3 w-full"
+          />
+          <input
+            type="text"
+            placeholder="Pin Code"
+            value={address.pinCode}
+            onChange={(e) => setAddress({ ...address, pinCode: e.target.value })}
+            className="border rounded p-3 w-full"
+          />
+        </div>
       </div>
 
-
+      
       <div className="mb-6">
         <label className="block font-medium mb-2">Payment Method</label>
         <div className="flex items-center gap-2">
@@ -83,10 +119,12 @@ const CheckoutPage = () => {
         </div>
       </div>
 
+ 
       <div className="text-right font-semibold mb-6 text-xl text-primary">
         Total: ${total.toFixed(2)}
       </div>
 
+      
       <button
         onClick={handleConfirm}
         className="w-full bg-primary text-white py-3 rounded hover:bg-primary/90 transition"
