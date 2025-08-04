@@ -83,7 +83,7 @@ const ProductDetails = () => {
           <div>
             <h1 className="text-3xl font-bold text-primary mb-3">{product.title}</h1>
             <p className="text-gray-700 text-sm mb-4">{product.description}</p>
-            <p className="text-xl font-bold text-accent mb-2">${product.price}</p>
+            <p className="text-xl font-bold text-accent mb-2">₹{product.price}</p>
             <p className="text-sm text-muted mb-2 capitalize">
               Category: {product.category}
             </p>
